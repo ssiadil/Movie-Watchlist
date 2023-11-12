@@ -10,6 +10,10 @@ function imageExists(image_url){
 
 }
 
+function spinnerMarkUp() {
+    const html = '<div class="lds-dual-ring"></div>';
+    return html;
+}
 
 
 
@@ -42,13 +46,16 @@ function userInput() {
 }
 
 function getMovie() {
+    document.querySelector(".film-container").innerHTML = '';
+    document.querySelector('.main-container').innerHTML = spinnerMarkUp();
     const parameter = userInput();
-    document.querySelector('.film-container').innerHTML = '';
     if(parameter) {
         fetch(`http://www.omdbapi.com/?apikey=c3511f72&s=${parameter}`)
         .then(res =>res.json())
         .then(data => {
-            return data.Search
+            const realData = [];
+            data.Search.forEach(mv => mv.Type === "movie" ? realData.push(mv): "");
+            return realData;
         }).then(res => {
             for(let i = 0 ; i < res.length; i++) {
                 // sendRequest(res[i].imdbID)
@@ -69,6 +76,8 @@ function getMovie() {
 
 
 function renderMarkUp(data) {
+    
+    
     document.querySelector('.main-container').innerHTML = '';
 
     const html =  `

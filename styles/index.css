@@ -12,6 +12,8 @@ body {
     background-color: #1C1C1C;
     color: #fff;
     font-family: 'Inter', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 a:link,
@@ -251,4 +253,32 @@ input:focus {
     margin-top: 1.5rem;
     font-size: 1.8rem;
 }
+
+
+/* Spinner */
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fed;
+    border-color: #fed transparent #fed transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
