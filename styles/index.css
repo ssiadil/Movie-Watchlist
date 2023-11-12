@@ -229,6 +229,7 @@ input:focus {
     line-height: 1.4;
     color: #A5A5A5;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
 .film-description p::-webkit-scrollbar {
