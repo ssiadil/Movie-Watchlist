@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50%;
+}
+
+body {
+    background-color: #1C1C1C;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: all .3s;
+}
+
+a:hover,
+a:active {
+    box-shadow: 0 1px 0 0 rgb(255, 255, 255);
+} 
+
+
+.header-image-container {
+    position: relative;
+}
+
+.header-img {
+    width: 100%;
+}
+
+.header-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.link-watchlist {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+.input-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    transform: translateY(-35%);
+}
+
+input {
+    background-color: #2E2E2F;
+    color: #fff;
+    padding: .8rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 6px;
+    text-indent: 2.4rem;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 .1rem 0 0 #fff;
+}
+
+
+
+
+.search-btn {
+    background-color: #4B4B4B;
+    color: #fff;
+    border: none;
+    padding: .8rem 2rem;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+    transform: translateX(-6px);
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #9CA3AF;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+}
+
+
+.main-container {
+    max-width: 500px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+
+.tape-icon {
+    width: 15%;
+}
+
+.main-paragraph {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2E2E2F;
+}
+
+.film {
+    border-bottom: 1px solid #2C2C2C;
+    padding: 1rem;
+    margin: .5rem;
+    width: 95%;
+}
+
+.poster-container {
+    align-self: center;
+}
+
+
+.poster-img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+.film-info {
+    display: flex;
+    width: 100%;    
+}
+
+.film-more {
+    margin-left: 2rem;
+    width: 80%;
+    align-self: center;
+}
+
+.film-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.film-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: .5rem;
+}
+
+.star-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.rating {
+    font-size: 1rem;
+}
+
+.film-dur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-bottom: 4rem;
+}
+
+.genre {
+    font-size: 1rem;
+}
+
+.duration {
+    font-size: 1rem;
+}
+
+
+
+.add-to-watchlist-btn,
+.remove-from-watchlist-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-right: .4rem;
+}
+
+.add-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.added-icon,
+.remove-icon {
+    font-size: 1.6rem;
+}
+
+.add-container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.film-description p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #A5A5A5;
+    overflow: scroll;
+}
+
+.film-description p::-webkit-scrollbar {
+    width: 0;
+}
+
+.empty-watchlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.empty-title {
+    color: #787878;
+    font-size: 2rem;
+}
+
+.empty-mssg {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+}
+
+
+/* Spinner */
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fed;
+    border-color: #fed transparent #fed transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
